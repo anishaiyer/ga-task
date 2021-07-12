@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>Form Page</title>
+
+<body>
+<form action="imgpage.html" method="GET" name="myForm" onsubmit="return validate()" >
+    Name
+    <input type="text" id="name" name="name">
+    <br>
+    <br>
+    Email
+    <input type="email" id="email" name="email">
+    <br>
+    <br>
+    Mobile
+    <input type="phone" id="phone" name="phone">
+    <br>
+    <br>
+    DOB
+    <input type="date" id="dob" name="dob">
+    <br>
+    <br>
+    Gender
+    <br>
+    <input type="radio" id="male" name="gender" value="Male">Male
+    <br>
+    <input type="radio" id="female" name="gender" value="Female">Female
+    <br>
+    <input type="radio" id="other" name="gender" value="Other">Other
+    <br>
+    <br>
+    <input type="submit" value="Submit" >
+
+
+    <script>
+        function validate(){
+            // name validation
+            var name = document.getElementById('name').value;
+            var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+            if(format.test(name)){
+                alert("Name cannot contain special characters");
+                return false;
+            }
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            
+            
+            //email validation
+            var email = document.getElementById('email').value;
+            var x = email.indexOf("@");
+            var y = email.indexOf(".");
+            if(x == -1 || y == -1){
+                alert("Invalid Email");
+                return false;
+            }
+
+
+            //mobile no validation
+            var phone = document.getElementById('phone').value;
+            var alph = /^[A-Za-z]+$/;
+            if(format.test(phone)){
+                alert("Phone number cannot contain special characters");
+                return false;
+            }
+            if(alph.test(phone)){
+                alert("Phone number cannot contain alphabets");
+                return false;
+            }
+
+            if(phone.length() != 10){
+                alert("Phone number must have 10 digits.");
+                return false;
+            }
+
+
+            // dob validation
+
+            var dob = document.getElementById('dob').value;
+
+            dby = dob.slice(0,4);
+
+            if(2021-dby < 18){
+                alert("Age should be atleast 18 years old");
+                return false;
+            }
+
+            if(dob == ""){
+                alert("Please provide a DOB");
+                return false;
+            }
+
+
+            // gender validation
+            var gender = "";
+            if (document.getElementById('male').checked){
+                var gender = document.getElementById('male').value;
+            }
+            else if (document.getElementById('female').checked){
+                var gender = document.getElementById('female').value;
+            }
+            else if (document.getElementById('other').checked){
+                var gender = document.getElementById('other').value;
+            }
+                
+            if(gender == ""){
+                alert("Please select a gender");
+                return false;
+            }
+
+            
+            return true;
+            
+        }
+
+    </script>
+    
+
+    
+</form>
+</body>
+</html>

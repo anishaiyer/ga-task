@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    
+</head>
+<body onload="getImage()">
+    <img id="image" src="" alt="" width="300" height="200" >
+    <h1>Thank You</h1>
+    
+    <script type="text/javascript">
+        function getImage(){
+            const queryString = window.location.search;
+        const parameters = new URLSearchParams(queryString);
+        const img = parameters.get('image');
+        document.getElementById("image").src = ""+img;
+        return img;
+        }s  
+    </script>
+</body>
+</html>
