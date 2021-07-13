@@ -13,7 +13,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Page</title>
 </head>
-<body><!-- Google Tag Manager (noscript) -->
+<body onload = "window.dataLayer.push({
+ 'event': 'pageload',
+ 'timeFormStarted': Date.now() 
+ })">
+    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTK5VL6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
