@@ -27,19 +27,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <form action="typage.html" method="GET" name="myForm" onsubmit="return checkSelection()" >
-    <input class="image" type="radio" id="img1" name="image" value="img1.jpg">    <img src="img1.jpg" alt="" width="150" height="100">
+    <input class="image" type="radio" id="img1" name="image" value="img1.jpg" onchange = "dataLayer.push({'event':'img-selected','timestamp': new Date().getTime()})">    <img src="img1.jpg" alt="" width="150" height="100">
 
     <br>
-    <input class="image" type="radio" id="img2" name="image" value="img2.jpg">    <img src="img2.jpg" alt="" width="150" height="100">
+    <input class="image" type="radio" id="img2" name="image" value="img2.jpg" onchange = "dataLayer.push({'event':'img-selected','timestamp': new Date().getTime()})">    <img src="img2.jpg" alt="" width="150" height="100">
 
     <br>
-    <input class="image" type="radio" id="img3" name="image" value="img3.jpg">    <img src="img3.jpg" alt="" width="150" height="100">
+    <input class="image" type="radio" id="img3" name="image" value="img3.jpg" onchange = "dataLayer.push({'event':'img-selected','timestamp': new Date().getTime()})">    <img src="img3.jpg" alt="" width="150" height="100">
 
     <br>
-    <input class="image" type="radio" id="img4" name="image" value="img4.jpg">     <img src="img4.jpg" alt="" width="150" height="100">
+    <input class="image" type="radio" id="img4" name="image" value="img4.jpg" onchange = "dataLayer.push({'event':'img-selected','timestamp': new Date().getTime()})">     <img src="img4.jpg" alt="" width="150" height="100">
 
     <br>
-    <input class="image" type="radio" id="img5" name="image" value="img5.jpg">    <img src="img5.jpg" alt="" width="150" height="100">
+    <input class="image" type="radio" id="img5" name="image" value="img5.jpg" onchange = "dataLayer.push({'event':'img-selected','timestamp': new Date().getTime()})">    <img src="img5.jpg" alt="" width="150" height="100">
         <br>
     <br>
     <input type="submit" value="      Next      " >
